@@ -1,2 +1,5 @@
+<div align="center">
+  <img src="gitassets/images/logo.png" alt="drawing" width="150"/>
+  
 # CoinScope
-A realtime cryptocurrency wallet tracker.
+</div>
