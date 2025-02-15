@@ -23,6 +23,7 @@ export default function CoinTracker() {
 
     return (
         <div>
+            
             <h1>Live Crypto Tracker</h1>
             <div>
                 <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
