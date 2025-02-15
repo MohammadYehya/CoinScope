@@ -23,14 +23,30 @@ services:
       - zookeeper
 
   frontend:
+    environment:
+      KAFKAPATH: kafka
+      STREAMPATH: streamingserver
     depends_on:
       - kafka
+      - streamingserver
     build:
       context: frontend
     networks:
       - CoinScope
     ports:
       - 3000:3000
+
+  streamingserver:
+    environment:
+      KAFKAPATH: kafka
+    depends_on:
+      - kafka
+    build: 
+      context: streamingserver
+    networks:
+      - CoinScope
+    ports:
+      - 4000:4000
 
 networks:
   CoinScope:
