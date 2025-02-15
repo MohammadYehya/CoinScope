@@ -3,7 +3,7 @@
   
 # CoinScope
 
- ![NextJS](https://img.shields.io/badge/NextJS-000000?logo=next.js&logoColor=ffdd54)
+ ![NextJS](https://img.shields.io/badge/NextJS-black?logo=next.js&logoColor=white)
  ![Kafka](https://img.shields.io/badge/Kafka-FFFFFF.svg?logo=apachekafka&logoColor=black)
  ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-00BBFF.svg?logo=tailwindcss&logoColor=white)
  ![NodeJS](https://img.shields.io/badge/NodeJS-green.svg?logo=node.js&logoColor=white)
