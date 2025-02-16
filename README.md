@@ -46,7 +46,7 @@ docker compose up
 
 ---
 
-### 📸 Architecture  
+### Architecture  
 
 <img src="gitassets/images/Architecture.svg" alt="architecure"/>
 
