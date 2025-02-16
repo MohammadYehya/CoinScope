@@ -24,7 +24,7 @@
 ### Table of Contents
 
 - [Installation](#installation)
-- [Features](#features)
+- [Architecture](#architecture)
 - [Credits](#credits)
 
 ---
