@@ -1,78 +1,19 @@
 "use client";
-import { LoaderCircle } from "lucide-react";
-import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
-
-const socket = io((process.env.STREAMPATH || "localhost") + ":4000");
+import Link from "next/link";
 
 export default function CoinTracker() {
-  const [text, setText] = useState("");
-  const [selectedCoin, setSelectedCoin] = useState("");
-  const [transactions, setTransactions] = useState<{ s: string; c: string }>();
-  const [test, setTest] = useState([]);
-
-    async function getTradingPairs() {
-      const res = await fetch("/api/getTradingPairs");
-      const data = await res.json();
-      setTest(data.data.symbols.map((item: { symbol: string }) => item.symbol));
-    }
-
-  useEffect(() => {});
-
-  useEffect(() => {
-    socket.emit("SelectCoin", selectedCoin);
-
-    socket.on("transaction", (transaction) => {
-      setTransactions(transaction);
-    });
-
-    return () => {
-      socket.off("transaction");
-    };
-  }, [selectedCoin]);
-
   return (
-    // <div className="p-96">
-    //   <h1>Live Crypto Tracker</h1>
-    //   <div>
-    //     <input
-    //       type="text"
-    //       value={text}
-    //       onChange={(e) => setText(e.target.value)}
-    //     />
-    //     <button
-    //       onClick={() => {
-    //         setTransactions(undefined);
-    //         setSelectedCoin(text);
-    //       }}
-    //     >
-    //       Send Message
-    //     </button>
-    //   </div>
-    //   <button
-    //     onClick={() => {
-    //       getTradingPairs();
-    //     }}
-    //   >
-    //     Test
-    //   </button>
-    //   {test.map((item) => (
-    //     <div onClick={() => {setText(item); setTest([])}} key={item}>{item}</div>
-    //   ))}
-
-    //   <h2>Transactions</h2>
-    //   <div>
-    //     {transactions ? (
-    //       `${transactions?.s} : ${transactions?.c}`
-    //     ) : selectedCoin ? (
-    //       <LoaderCircle className="flex justify-center animate-spin ease-linear" />
-    //     ) : (
-    //       ""
-    //     )}
-    //   </div>
-    // </div>
-    <div>
-      test
+    <div className="h-screen w-screen flex justify-center items-center text-white bg-[url('/image.png')] bg-cover bg-black">
+      <div>
+        <h1 className="text-6xl lg:text-8xl font-black flex">CoinScope</h1>
+        <p className="text-lg pl-6 lg:pl-10">Scope the gain, skip the pain!</p>
+        <Link
+          href={"/Track"}
+          className="border rounded-full p-2 flex items-center justify-self-center mt-20 hover:bg-white hover:text-black transition-all duration-300 hover:scale-125"
+        >
+          Try it out
+        </Link>
+      </div>
     </div>
   );
 }
