@@ -132,7 +132,7 @@ export default function Track() {
           <div className="flex w-full h-full justify-center items-center">
             {transactions ? (
               <p className="text-2xl">
-                `${transactions?.s} : ${transactions?.c}`
+                {`${transactions?.s} : ${transactions?.c}`}
               </p>
             ) : selectedCoin ? (
               <LoaderCircle className="animate-spin ease-linear w-auto h-full" />
