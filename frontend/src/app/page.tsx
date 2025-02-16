@@ -72,7 +72,7 @@ export default function CoinTracker() {
     //   </div>
     // </div>
     <div>
-      
+      test
     </div>
   );
 }
