@@ -46,8 +46,9 @@ docker compose up
 
 ---
 
-### 📸 Features  
-_Add relevant UI screenshots here_  
+### 📸 Architecture  
+
+<img src="gitassets/images/Architecture.svg" alt="architecure"/>
 
 ---
 
