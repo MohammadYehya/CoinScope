@@ -17,7 +17,7 @@
 </div>
 
 
-**CoinScope** is a real-time cryptocurrency wallet tracking application built with **Next.js** and **Kafka**. It provides users with live updates on their wallet balances, and transactions ensuring they stay informed about their crypto assets. 
+**CoinScope** is a real-time cryptocurrency tracking application that provides updates on cryptocurrency values, helping users stay informed about market trends and price fluctuations.
 
 ---
 
